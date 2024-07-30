@@ -6,6 +6,8 @@ import { AppContextProvider } from './contexts/AppContext'
 
 function App() {
 
+  const todoitesm = ["Doining Java Script", "Doing Python","java SpringBoot"]
+
   return (
     <AppContextProvider>
       <div className="bg-[#172842] min-h-screen py-8">
@@ -16,6 +18,10 @@ function App() {
               <TodoInput></TodoInput>
             </div> 
             <div>
+              {todoitesm.map((v) => {
+                console.log(v);
+                <TodoSave item={v}></TodoSave>
+              })}
               <TodoSave></TodoSave>
               
             </div>        
